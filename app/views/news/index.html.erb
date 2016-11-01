@@ -1,8 +1,15 @@
-<ul>
-  <% @results.each do |result| %>
-        <li>
-          <p><%= link_to result.title, result.url, target: "_blank" %></p>
-          <p><%= result %></p>
-        </li>
-  <% end %>
-</ul>
+<div class="row">
+     <div class="col-md-8">
+       <% @results.each do |result| %>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= link_to result.title, result.url, target: "_blank" %></h3>
+          </div>
+          <div class="panel-body">
+            <p><%= result %></p>
+          </div>
+         </div>
+        <% end %>
+     </div>
+</div>
+
