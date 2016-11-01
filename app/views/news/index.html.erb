@@ -1,2 +1,8 @@
-<h1>News#index</h1>
-<p>Find me in app/views/news/index.html.erb</p>
+<ul>
+  <% @results.each do |result| %>
+        <li>
+          <p><%= link_to result.title, result.url, target: "_blank" %></p>
+          <p><%= result.content %></p>
+        </li>
+  <% end %>
+</ul>
